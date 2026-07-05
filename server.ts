@@ -16,7 +16,8 @@ const io = new Server(server, {
   }
 });
 
-const PORT = 5173;
+//const PORT = 5173;
+const PORT = Number(process.env.PORT) || 3000;
 const JWT_SECRET = process.env.JWT_SECRET || 'collabdraw-secret-key-12345';
 
 // Middlewares

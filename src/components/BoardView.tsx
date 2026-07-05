@@ -106,6 +106,9 @@ export default function BoardView({ boardId, onBackToDashboard }: BoardViewProps
 
     // Connect to WebSockets (Socket.io binds to Port 3000 alongside Express)
     const socketInstance = io();
+//     const socketInstance = io("http://localhost:3000", {
+//   transports: ["websocket"],
+// });
 
     socketInstance.on('connect', () => {
       console.log('Connected to collaboration socket');

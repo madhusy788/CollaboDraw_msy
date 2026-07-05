@@ -20,7 +20,8 @@ import {
   Grid,
   Lock,
   Globe,
-  Settings
+  Settings,
+  
 } from 'lucide-react';
 
 interface DashboardViewProps {
@@ -37,6 +38,30 @@ export default function DashboardView({ onOpenBoard }: DashboardViewProps) {
 
   // Search/Filter
   const [searchTerm, setSearchTerm] = useState('');
+  const [boardLink, setBoardLink] = useState("");
+
+const handleJoinBoard = () => {
+  if (!boardLink.trim()) {
+    alert("Please paste a board link.");
+    return;
+  }
+
+  try {
+    const url = new URL(boardLink.trim());
+
+    // Gets the last part of the URL
+    const boardId = url.pathname.split("/").pop();
+
+    if (!boardId) {
+      alert("Invalid board link.");
+      return;
+    }
+
+    onOpenBoard(boardId);
+  } catch {
+    alert("Invalid board link.");
+  }
+};
 
   // Create Board Modal State
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
@@ -274,6 +299,52 @@ export default function DashboardView({ onOpenBoard }: DashboardViewProps) {
                     </p>
                   </div>
                 </div>
+                {/* JOIN BOARD */}
+
+<div className="mt-10 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-8 shadow-sm">
+
+    <div className="flex items-center gap-3 mb-6">
+
+        <div className="w-12 h-12 rounded-xl bg-cyan-100 dark:bg-cyan-900 flex items-center justify-center">
+
+            <Link2 className="w-6 h-6 text-cyan-600"/>
+
+        </div>
+
+        <div>
+
+            <h2 className="text-2xl font-bold">
+                Join Board
+            </h2>
+
+            <p className="text-sm text-gray-500">
+                Paste a board link shared with you.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div className="flex gap-4">
+
+        <input
+            type="text"
+            placeholder="Paste Board Link Here..."
+            value={boardLink}
+            onChange={(e)=>setBoardLink(e.target.value)}
+            className="flex-1 border rounded-xl px-5 py-4 focus:ring-2 focus:ring-cyan-500 outline-none"
+        />
+
+        <button
+            onClick={handleJoinBoard}
+            className="px-8 rounded-xl bg-cyan-600 hover:bg-cyan-700 text-white font-semibold transition"
+        >
+            Join Board
+        </button>
+
+    </div>
+
+</div>
 
                 <div className="flex items-center justify-between border-t border-slate-100 dark:border-slate-800 pt-5">
                   <span className="text-xs font-mono font-bold text-violet-600 dark:text-rose-400 bg-violet-50 dark:bg-violet-950/40 px-3 py-1.5 rounded-full">

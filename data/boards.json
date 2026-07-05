@@ -569,5 +569,31 @@
     "collaborators": [],
     "createdAt": "2026-07-04T16:40:55.192Z",
     "updatedAt": "2026-07-04T16:40:55.192Z"
+  },
+  {
+    "id": "gu8beerxknst1wlcclc7l",
+    "boardName": "john1",
+    "owner": "johndeo",
+    "theme": "white",
+    "visibility": "private",
+    "boardType": "infinite",
+    "slideCount": 50,
+    "objects": [],
+    "collaborators": [],
+    "createdAt": "2026-07-05T04:50:22.016Z",
+    "updatedAt": "2026-07-05T04:50:22.016Z"
+  },
+  {
+    "id": "3v9lmj4nv6l171nxyfi15m",
+    "boardName": "john2",
+    "owner": "johndeo",
+    "theme": "black",
+    "visibility": "private",
+    "boardType": "presentation",
+    "slideCount": 50,
+    "objects": [],
+    "collaborators": [],
+    "createdAt": "2026-07-05T04:55:16.642Z",
+    "updatedAt": "2026-07-05T04:55:16.642Z"
   }
 ]
