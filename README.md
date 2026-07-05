@@ -158,7 +158,7 @@ CollabDraw/
 Clone the repository
 
 
-git clone https://github.com/yourusername/collabdraw.git
+git clone https://github.com/madhusy788/CollaboDraw_msy
 
 
 Move into the project folder
@@ -254,7 +254,9 @@ Watch the complete demonstration of **CollabDraw** using the link below:
 
 **🎥 Demo Video:**
 
-https://your-video-link-here
+https://drive.google.com/file/d/12fwNDq4a4c1iQ5naUe1PdvdcKro4Dgdp/view?usp=sharing
+
+https://drive.google.com/file/d/1ug5CTUFp6WClYwlywaIj4VdfUYwPPbdS/view?usp=sharing
 
 The demo includes:
 
